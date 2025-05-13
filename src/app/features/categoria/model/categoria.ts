@@ -1,5 +1,5 @@
 export type Categoria = {
     id :string;
-    nome :string;
+    name :string;
     color :string;
 }
