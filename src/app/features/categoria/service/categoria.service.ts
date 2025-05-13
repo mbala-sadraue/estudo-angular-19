@@ -1,14 +1,15 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable, signal } from "@angular/core";
 import { Observable, take, tap } from "rxjs";
-import { Categoria } from "../../categoria/model/categoria";
+import { Categoria } from "../model/categoria";
+import { environment } from "../../../environment/environment";
 
 @Injectable({
     providedIn: 'root'
 })
 
 export class CategoriaService {
-    private readonly apiUrl = environment.apiUrl + 'categoria';
+    private readonly apiUrl = environment.apiUrl + 'categories';
     // constructor(private http: HttpClient) { }
 
     private readonly httlClient = inject(HttpClient);

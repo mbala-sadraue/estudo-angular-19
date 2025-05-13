@@ -1,4 +1,5 @@
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
+import { CategoriaService } from '../../service/categoria.service';
 
 @Component({
     'selector':'app-categoria',
@@ -6,5 +7,10 @@ import {Component} from '@angular/core';
 })  
 
 export class CategoriaComponent{
+
+    private readonly categoriaService = inject(CategoriaService);
+
+
+    categorias$ = this.categoriaService.getCategorias().subscribe();
     
 }
