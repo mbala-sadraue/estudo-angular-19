@@ -1,4 +1,13 @@
 <div class="h-screen section-task">
-   
-{{name}}
+
+      <div class="task-list">
+        <ul>
+            @for( task of tasks(); track task.id) {
+                <li>
+                    <span>{{task.title}}</span>
+                </li>
+            }
+        </ul>
+      </div>
+
 </div>

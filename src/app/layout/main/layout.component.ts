@@ -1,7 +1,7 @@
 import {Component} from '@angular/core'
 import {MatDividerModule} from '@angular/material/divider';
 import { CategoriaComponent } from '../../features/categoria/view/categoria/categoria.component';
-import { TaskCompoent } from '../../features/task/view/task/task.componet';
+import { TaskCompoent } from '../../features/task/view/task/task.component';
 
 const COMPONENTS =  [
     CategoriaComponent,

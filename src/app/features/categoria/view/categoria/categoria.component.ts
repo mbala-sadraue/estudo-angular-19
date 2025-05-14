@@ -12,7 +12,7 @@ const COMPONENTS = [
 @Component({
     'selector': 'app-categoria',
     templateUrl: 'categoria.component.html',
-    imports: [...COMPONENTS, ...PIPES],
+    imports: [...COMPONENTS, ],
 })
 
 export class CategoriaComponent {
