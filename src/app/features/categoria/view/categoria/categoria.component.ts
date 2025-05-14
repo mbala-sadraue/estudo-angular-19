@@ -19,6 +19,6 @@ export class CategoriaComponent {
 
     private readonly categoriaService = inject(CategoriaService);
 
-    categorias$ = this.categoriaService.getCategorias()
+    // categorias$ = this.categoriaService.getCategorias()
 
 }
