@@ -4,19 +4,23 @@ import { Observer } from 'rxjs';
 import { Task } from '../../model/task';
 import { AsyncPipe } from '@angular/common';
 import { toSignal } from '@angular/core/rxjs-interop';
+import { TaskFormComponent } from '../task-form.component/task-form.component';
 
 
 // const PIPES = [
 //     AsyncPipe
 // ]
+const COMPONENTS = [
+    TaskFormComponent
+]
 
 @Component({
     'selector': 'task-component',
     templateUrl: 'task.component.html',
     styleUrls: ['task.component.scss'],
-    // imports:[
-    //     ...PIPES
-    // ]
+    imports:[
+        TaskFormComponent
+    ]
 })
 
 export class TaskCompoent implements OnInit {
