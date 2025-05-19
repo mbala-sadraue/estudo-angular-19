@@ -13,7 +13,7 @@ const MODULES = [
 
 export class TaskFormComponent implements OnInit {  
   constructor() { }
-
+ task:string = '';
   ngOnInit(): void {
   }
 
