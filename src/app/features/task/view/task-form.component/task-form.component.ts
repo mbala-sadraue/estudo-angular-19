@@ -1,23 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
-import { MatSelectModule } from '@angular/material/select';
 const MODULES = [
+  MatInputModule,
   MatFormFieldModule,
-  MatIconModule,
-MatInputModule,
   FormsModule,
-  ReactiveFormsModule,
   MatSelectModule,
+  // ReactiveFormsModule,
+  // MatIconModule,
 ]
 
 @Component({
   selector: 'app-task-form',
   templateUrl: './task-form.component.html',
   styleUrls: ['./task-form.component.scss'],
-  standalone: true
+  standalone: true,
+  imports: [
+    ...MODULES
+  ] 
 })
 
 

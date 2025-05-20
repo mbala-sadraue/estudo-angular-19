@@ -1,7 +1,22 @@
-<form action="" method="">
+<form action="" method="" #myForm="ngForm">
     <div class="col-md-6">
-            <input type="text" name="form-control" id="">
+        <input matInput type="text" name="form-control" id="">
     </div>
+
+    <div class="col-md-6">
+        <mat-form-field>
+            <input matInput placeholder="Tarefa"    required>
+        </mat-form-field>
+    </div>
+
+    <mat-form-field>
+        <mat-label>Opção</mat-label>
+        <mat-select>
+          <mat-option value="1">Opção 1</mat-option>
+          <mat-option value="2">Opção 2</mat-option>
+        </mat-select>
+      </mat-form-field>
+      
 </form>
 
 <!-- mysql -u contacorrente_whispered -P 3307 -pf8565756970940b359ea21ec1cf2bc80d158948e -h etqo4.h.filess.io contacorrente_whispered  -->
