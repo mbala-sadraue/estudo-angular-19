@@ -1,4 +1,4 @@
-<form action="" method="" #myForm="ngForm">
+<!-- <form action="" method="" #myForm="ngForm">
     <div class="col-md-6">
         <input matInput type="text" name="form-control" id="">
     </div>
@@ -18,6 +18,16 @@
         </mat-select>
       </mat-form-field>
       
+</form> -->
+
+<form action="" style="margin-top: 30px;" [formGroup]="formBuilder" >
+    <div class="col-md-6">
+        <mat-form-field>
+            <input  matInput name="task"  formControlName="task"  >
+        </mat-form-field>
+    </div>
+
+    
 </form>
 <h1>{{ task}}</h1>
 
