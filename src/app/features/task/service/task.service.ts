@@ -9,9 +9,9 @@ import { Observable, take, tap } from 'rxjs';
 
 export class TaskService {
 
-    readonly http = inject(HttpClient);
+    private readonly http = inject(HttpClient);
 
-    readonly _apiUrl = 'http://localhost:3000/tasks';
+    private readonly _apiUrl = 'http://localhost:3000/tasks';
 
     public tasks = signal(<Task[]>([]));
     public numberOfTasks = computed(() => this.tasks().length)

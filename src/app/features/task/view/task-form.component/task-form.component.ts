@@ -5,8 +5,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { CategoriaService } from '../../../categoria/service/categoria.service';
+import { Task } from '../../model/task';
+import { TaskService } from '../../service/task.service';
 const MODULES = [
-  // MatInputModule,
+  MatInputModule,
   MatFormFieldModule,
   FormsModule,
   MatSelectModule,
@@ -27,13 +29,14 @@ const MODULES = [
 
 export class TaskFormComponent implements OnInit {
   constructor() { }
-  task: string = '';
+  taskService = inject(TaskService);
+  title: string = '';
   fb = inject(FormBuilder);
   categoriesServices = inject(CategoriaService)
   formBuilder: FormGroup = new FormGroup({});
   categories = this.categoriesServices.categorias;
   formGroup: FormGroup = new FormGroup({
-    task: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    title: new FormControl('', [Validators.required, Validators.minLength(3)]),
     categoryId: new FormControl('', [Validators.required]),
   })
 
@@ -42,8 +45,8 @@ export class TaskFormComponent implements OnInit {
 
 
     this.formBuilder = this.fb.group({
-      task: ['', Validators.required, Validators.minLength(3)],
-      categoryId: ['', Validators.required],
+      title: ['', [Validators.required, Validators.minLength(3)]],
+      categoryId: ['',[ Validators.required]],
     });
 
     // this.formGroup 
@@ -53,8 +56,17 @@ export class TaskFormComponent implements OnInit {
     
     if(this.formBuilder.invalid) return false;
 
+    const {title, categoryId} = this.formBuilder.value;
+    const newTask:Partial<Task>  = {
+      title,
+      categoryId,
+      // completed: false,
+    };
 
-    console.log(this.formBuilder.value);
+
+
+    this.taskService.createTask(newTask).subscribe()
+    console.log(newTask);
     
 }
 }

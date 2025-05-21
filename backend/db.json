@@ -1,38 +1,42 @@
 {
-
-  "tasks":[
+  "tasks": [
     {
-      "id":"1",
-      "title":"Estudar Angular",
-      "categoryId":"2",
-      "isCompleted":false
+      "id": "1",
+      "title": "Estudar Angular",
+      "categoryId": "2",
+      "isCompleted": false
+    },
+    {
+      "id": "632c",
+      "title": "estudar flutter",
+      "categoryId": "2"
     }
   ],
-    "categories": [
-        {
-            "id": "1",
-            "name": "Casa",
-            "color": "green"
-          },
-          {
-            "id": "2",
-            "name": "Estudo",
-            "color": "orange"
-          },
-          {
-            "id": "3",
-            "name": "Trabalho",
-            "color": "blue"
-          },
-          {
-            "id": "4",
-            "name": "Pessoal",
-            "color": "red"
-          },
-          {
-            "id": "5",
-            "name": "Saúde",
-            "color": "purple"
-          }
-    ]
+  "categories": [
+    {
+      "id": "1",
+      "name": "Casa",
+      "color": "green"
+    },
+    {
+      "id": "2",
+      "name": "Estudo",
+      "color": "orange"
+    },
+    {
+      "id": "3",
+      "name": "Trabalho",
+      "color": "blue"
+    },
+    {
+      "id": "4",
+      "name": "Pessoal",
+      "color": "red"
+    },
+    {
+      "id": "5",
+      "name": "Saúde",
+      "color": "purple"
+    }
+  ]
 }
