@@ -1,0 +1,42 @@
+<!-- <form action="" method="" #myForm="ngForm">
+    <div class="col-md-6">
+        <input matInput type="text" name="form-control" id="">
+    </div>
+
+    <div class="col-md-6">
+        <mat-form-field>
+            <input matInput name="task" placeholder="Tarefa" [(ngModel)]="task"   >
+        </mat-form-field>
+    </div>
+
+    <mat-form-field>
+        <mat-label>Opção</mat-label>
+        <mat-select>
+            @for(category of categories(); track category.id){
+                <mat-option [value]="category.id">{{category.name}}</mat-option>
+            }
+        </mat-select>
+      </mat-form-field>
+      
+</form> -->
+
+<form action="" style="margin-top: 30px;" [formGroup]="formBuilder"  >
+    <div class="col-md-6">
+        <mat-form-field>
+            <input  matInput name="title"  formControlName="title"  (keyup.enter)="addTask()" placeholder="Tarefa" [(ngModel)]="title" >
+        </mat-form-field>
+    </div>
+    <div class="col-md-6">
+        <mat-form-field>
+         <mat-select formControlName="categoryId">
+            <mat-label>Categoria</mat-label>
+            @for(category of categories(); track category.id){
+                <mat-option [value]="category.id">{{category.name}}</mat-option>
+            }
+         </mat-select>  
+        </mat-form-field>
+    </div>    
+</form>
+<h1>{{ title}}</h1>
+
+<!-- mysql -u contacorrente_whispered -P 3307 -pf8565756970940b359ea21ec1cf2bc80d158948e -h etqo4.h.filess.io contacorrente_whispered  -->
