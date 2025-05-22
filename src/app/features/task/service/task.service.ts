@@ -1,7 +1,7 @@
 import { computed, inject, Injectable, signal } from '@angular/core';
 import { Task } from '../model/task';
 import { HttpClient } from '@angular/common/http';
-import { Observable, take, tap } from 'rxjs';
+import { Observable, take, takeUntil, tap } from 'rxjs';
 @Injectable({
     providedIn: 'root'
 })
@@ -30,7 +30,8 @@ export class TaskService {
 
 
     public createTask(task: Partial<Task>): Observable<Task> {
-        return  this.http.post<Task>(this._apiUrl, task).pipe(
+        return  this.http.post<Task>(this._apiUrl, task)
+        .pipe(
             tap(
                 (taskNew) => {
                     this.tasks.update(
@@ -44,6 +45,7 @@ export class TaskService {
 
     public editTask(task: Task): Observable<Task> {
         return this.http.put<Task>(`${this._apiUrl}/${task.id}`, task).pipe(
+            take(1),
             tap(() =>
                 {
                     this.tasks.update(

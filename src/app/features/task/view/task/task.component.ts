@@ -32,13 +32,14 @@ export class TaskCompoent implements OnInit {
     // tasks = signal<Task[]>([]);
     
     private readonly taskService = inject(TaskService);
-    
-    tasks = toSignal(this.taskService.getTasks(), { initialValue: [] });
+   
+    // tasks = toSignal(this.taskService.getTasks(), { initialValue: [] });
+
+    tasks = this.taskService.tasks
+    numberOfTasks = this.taskService.numberOfTasks
     ngOnInit() {
+        this.taskService.getTasks().subscribe();
         // this.tasks = this.taskService.tasks();
-
         // this.tasks$ = this.taskService.getTasks();
-
-
     }
 }
