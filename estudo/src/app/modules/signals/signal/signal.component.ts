@@ -1,4 +1,4 @@
-import { Component, signal, WritableSignal, computed, Signal } from '@angular/core'
+import { Component, signal, WritableSignal, computed, Signal, effect } from '@angular/core'
 import { log } from 'console';
 // import { signal } from '@angular/core/rxjs-interop';
 
@@ -20,14 +20,23 @@ export class SignalComponent {
         console.log('condictionalAcount');
 
         if (this.showCount()) {
-            return "Contador: " + this.numero();
+            return "Contador: " + this.count();
         } else {
             return "Contador oculto";
         }
 
     })
 
+    
+  
+
     constructor() {
+
+        effect(() =>{
+            console.log('Valor de numero:', this.count());
+        
+    
+        });
         this.numero2.set(10)
 
         this.numero.set(20)
@@ -45,14 +54,27 @@ export class SignalComponent {
             }
         ) 
 
-
+        console.log('Valor de count 1:', this.condictionalAcount());
+        // this.count.set(50)
+        this.showCount.set(true)
+        this.count.set(50)
+        console.log('Valor de count 2:', this.condictionalAcount());
+        this.count.set(30)
+        this.count.set(10)
+        // console.log('Valor de count 2:', this.condictionalAcount());
+        
+        
+        
+        
+        
         // console.log('soma:', this.soma());
-
+        
         // this.numero2.update((value) => value + 10);
         // console.log('soma:', this.soma());
-
+        
+       
     }
-
+    
 
 
 
