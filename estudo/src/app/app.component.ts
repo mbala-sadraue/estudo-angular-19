@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { SignalComponent } from './modules/signals/signal/signal.component';
+import { ComponentComponent } from './modules/components/component/component.component';
 const COMPONENTS = [
-    SignalComponent
+    SignalComponent,ComponentComponent
 ]
 
 @Component({
