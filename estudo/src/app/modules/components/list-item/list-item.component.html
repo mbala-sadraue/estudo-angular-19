@@ -1,4 +1,9 @@
-<h2>{{ title() }}</h2>
-<p>{{ numero()}}</p>
+<!-- <h2>{{ title() }}</h2>
+<p>{{ numero()}}</p> -->
 <!-- <p>{{ contador()}} <button type="button" (click)="incrementValue()">aumentar +</button> <button type="button" (click)="decrementValue()">Diminuir -</button></p> -->
-<p>{{ contador()}} <button type="button" (click)="incrementValue()">aumentar +</button> <button type="button" (click)="decrementValue()">Diminuir -</button></p>
+<!-- <p>{{ contador()}} <button type="button" (click)="incrementValue()">aumentar +</button> <button type="button" (click)="decrementValue()">Diminuir -</button></p> -->
+
+<div class="">
+    <ng-content selector="header"></ng-content>
+    <ng-content selector="body"></ng-content>
+</div>
