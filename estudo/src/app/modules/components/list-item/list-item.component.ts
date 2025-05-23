@@ -1,4 +1,4 @@
-import { Component,input } from '@angular/core';
+import { Component,input, model } from '@angular/core';
 
 @Component({
     selector: 'app-list-item',
@@ -14,7 +14,18 @@ export class ListItemComponent {
     numero = input('',{transform: verififyValue, alias: 'value'})
 
     title = input.required<string>()
+
+    contador = model<number>(0);
+
+    incrementValue() {
+        this.contador.update( (oldValue:number)=> oldValue + 1   );
+    }
+
+    decrementValue(){
+        this.contador.update( (oldValue) => oldValue - 1)
+    }
 }
+
 
 function verififyValue(value: number): string {
 
