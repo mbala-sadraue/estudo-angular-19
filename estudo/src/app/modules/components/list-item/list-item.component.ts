@@ -1,4 +1,4 @@
-import { Component,input, model } from '@angular/core';
+import { Component,input, model, output } from '@angular/core';
 
 @Component({
     selector: 'app-list-item',
@@ -17,8 +17,10 @@ export class ListItemComponent {
 
     contador = model<number>(0);
 
+    clickIncrementValue = output<number>();
     incrementValue() {
         this.contador.update( (oldValue:number)=> oldValue + 1   );
+        this.clickIncrementValue.emit(this.contador())
     }
 
     decrementValue(){

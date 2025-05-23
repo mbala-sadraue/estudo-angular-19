@@ -1,4 +1,4 @@
 <h2>Component</h2>
 
-<app-list-item [value]="10" [title]="'Primeiro'" [(contador)]="contador1"/>:{{ contador1() }}
+<app-list-item [value]="10" [title]="'Primeiro'" [(contador)]="contador1" (clickIncrementValue)="incrementValue($event)"/>:{{ contador1() }}
 <app-list-item [value]="0" [title]="'Segundo'"/>

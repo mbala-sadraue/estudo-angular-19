@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, effect, input, signal, ViewEncapsulation} from '@angular/core';
+import { ChangeDetectionStrategy, Component, effect, input, signal, ViewEncapsulation } from '@angular/core';
 import { ListItemComponent } from '../list-item/list-item.component';
 
 
@@ -14,18 +14,18 @@ const COMPONENTS = [
         ...COMPONENTS
     ],
     providers: [],
-    encapsulation: ViewEncapsulation.Emulated,  
+    encapsulation: ViewEncapsulation.Emulated,
     changeDetection: ChangeDetectionStrategy.Default,
-    
+
 
 
 })
-export class ComponentComponent{
+export class ComponentComponent {
 
     constructor() {
-        effect(() => {
-            console.log('ComponentComponent contador1: ', this.contador1());
-        })
+        // effect(() => {
+        //     console.log('ComponentComponent contador1: ', this.contador1());
+        // })
     }
 
     // @input({transform: verififyValue, alias: 'value'})
@@ -44,10 +44,15 @@ export class ComponentComponent{
     //     this.contador.update( (oldValue) => oldValue - 1)
     // }
 
-contador1 = signal<number>(20)
+    contador1 = signal<number>(20)
 
+    ngOnInit() {
+        this.contador1.set(10)
+    }
 
-ngOnInit() {
-  this.contador1.set(10)
-}
+    incrementValue(event: any){
+
+        console.log("Eventos => "+event)
+
+    }
 }
