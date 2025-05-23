@@ -48,11 +48,41 @@ export class ComponentComponent {
 
     ngOnInit() {
         this.contador1.set(10)
+        console.log("OnInit");
+
     }
 
-    incrementValue(event: any){
+    ngOnChanges(): void {
+        console.log("ngOnChanges");
+    }
 
-        console.log("Eventos => "+event)
+    ngDocheck(): void {
+        console.log("ngDocheck");
+
+    }
+    ngAfterContentInit(): void {
+        console.log("ngAfterContentInit");
+
+    }
+    ngAfterContentChecked(): void {
+        console.log("ngAfterContentChecked");
+
+    }
+    ngAfterViewInit(): void{
+        console.log("ngAfterViewInit");
+        
+    }
+    ngAfterViewChecked(): void{
+        console.log("ngAfterViewChecked");
+    }
+
+    ngOnDestroy():void{
+        console.log("OnDesctroy");
+        
+    }
+    incrementValue(event: any) {
+
+        console.log("Eventos => " + event)
 
     }
 }

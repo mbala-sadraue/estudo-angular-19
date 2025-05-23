@@ -8,7 +8,7 @@ import { Component,input, model, output } from '@angular/core';
 })
 export class ListItemComponent {
     constructor() {
-        console.log('ListItemComponent initialized');
+        // console.log('ListItemComponent initialized');
     }
 
     numero = input('',{transform: verififyValue, alias: 'value'})
