@@ -54,7 +54,12 @@ export class ListItemComponent {
     ngAfterViewInit(): void{
         console.log("ngAfterViewInit 2");
         // console.log("header title"+ this.headerTitle);
-        console.log("header title: "+ this.headerTitle());
+        const headerInstance = this.header();
+        if(headerInstance){
+
+            headerInstance.title = "Novo 2";
+        }
+        console.log("header title: "+ this.header()?.title);
         
     }
     ngAfterViewChecked(): void{
