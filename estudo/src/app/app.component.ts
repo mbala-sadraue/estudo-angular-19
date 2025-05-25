@@ -3,8 +3,10 @@ import { RouterOutlet } from '@angular/router';
 
 import { SignalComponent } from './modules/signals/signal/signal.component';
 import { ComponentComponent } from './modules/components/component/component.component';
+import { TemplateComponent } from './modules/templates/template/template.component';
 const COMPONENTS = [
-    SignalComponent,ComponentComponent
+   TemplateComponent,
+  //  SignalComponent, ComponentComponent
 ]
 
 @Component({

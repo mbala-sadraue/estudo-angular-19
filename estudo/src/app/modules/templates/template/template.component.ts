@@ -1,4 +1,4 @@
-import {Component} from '@angular/core'
+import {Component, signal, WritableSignal} from '@angular/core'
 
 @Component(
     {
@@ -8,4 +8,9 @@ import {Component} from '@angular/core'
     }
     
 )
-export class TemplateComponent {}
+export class TemplateComponent {
+
+    isFormValid:WritableSignal<boolean> = signal<boolean>(true)
+    isFormValid2 = true
+    link = 'http://www.facebook.com'
+}
