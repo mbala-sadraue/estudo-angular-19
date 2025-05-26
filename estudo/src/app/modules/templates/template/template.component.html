@@ -16,3 +16,18 @@
  <input type="text" name="" id=""(keyup.enter)="onKeyupEnter($event)" > <!--  Especificar o evento -->
 <br/>
 <a href="#overlay" (click)="showOverlay($event)">Overlay</a>
+<br/>
+<!-- Use @for -->
+
+<ul>
+    @for(item of items; track item.id; let i = $index; let last = $last; let first = $first){
+        @if($first){
+            <li> #{{i }}:  {{ item.name}} - primeiro</li>
+        }@else{
+            <li> #{{i }}:  {{ item.name}}</li>      
+        }
+        
+    }@empty{
+        <li> Sem Dados</li>
+    }
+</ul>
