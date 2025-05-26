@@ -35,11 +35,17 @@
 <!-- PIPES -->
 
 
-    @for(item of items; track item.id; let i = $index; let last = $last; let first = $first){
+    <!-- @for(item of items; track item.id; let i = $index; let last = $last; let first = $first){ -->
       <!-- <li>{{ item | json}}</li> -->
         <!-- <li> #{{i }}:  {{ item.name | uppercase }}</li>       -->
-        <li> #{{i }}:  {{ item.name | myCustomTransformation }} - {{ item.amount | currency}} - {{ item.date | date:'dd:MM:y'}}</li>      
+        <!-- <li> #{{i }}:  {{ item.name | myCustomTransformation }} - {{ item.amount | currency}} - {{ item.date | date:'dd:MM:y'}}</li>      
         
     }@empty{
         <li> Sem Dados</li>
-    }
+    } -->
+
+<!-- Variavel Local -->
+
+@let num1 =  1;
+<h1>{{ num1 + 1  }}</h1>
+<input type="text" #inputText>
