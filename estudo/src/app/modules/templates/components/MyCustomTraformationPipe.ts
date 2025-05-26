@@ -4,7 +4,7 @@ import { Pipe, PipeTransform } from '@angular/core';
     name:'myCustomTransformation',
 })
 export class MyCustomTransformationPipe  implements PipeTransform {
-  transform(value:string){
+  transform(value:string): string{
     return value.toUpperCase();;
   }
 }
