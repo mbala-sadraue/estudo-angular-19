@@ -1,0 +1,9 @@
+<h2>Component</h2>
+
+<app-list-item [value]="10" [title]="'Primeiro'" [(contador)]="contador1" (clickIncrementValue)="incrementValue($event)"/>:{{ contador1() }}
+<app-list-item [value]="0" [title]="'Segundo'"/>
+
+<!-- <app-list-item [title]="'Uso de ng-content'">
+    <h2 class="header">Ola</h2>
+    <h2 class="header">body</h2>
+</app-list-item> -->

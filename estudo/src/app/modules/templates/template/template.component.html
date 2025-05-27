@@ -1,0 +1,51 @@
+<h2>Template</h2>
+
+<!-- use propety binding -->
+<button type="button" [disabled]="isFormValid() == true">Cadastrar</button>
+<button type="button" [disabled]="false">Cadastrar</button>
+<button [disabled]="isFormValid2">Save</button>
+<a [href]="link">Facebook</a>
+
+<!-- Use class -->
+<button type="button" [class]="classBtn" [class]="btnPrimary">Entar</button>
+<button type="button"  [class]="btnHover">Inscrever-se</button>
+<br/>
+
+<!-- Events -->
+ <!-- <input type="text" name="" id=""(keyup)="onKeyup($event)" > -->
+ <input type="text" name="" id=""(keyup.enter)="onKeyupEnter($event)" > <!--  Especificar o evento -->
+<br/>
+<a href="#overlay" (click)="showOverlay($event)">Overlay</a>
+<br/>
+<!-- Use @for -->
+
+<!-- <ul>
+    @for(item of items; track item.id; let i = $index; let last = $last; let first = $first){
+        @if($first){
+            <li> #{{i }}:  {{ item.name}} - primeiro</li>
+        }@else{
+            <li> #{{i }}:  {{ item.name}}</li>      
+        }
+        
+    }@empty{
+        <li> Sem Dados</li>
+    }
+</ul> -->
+
+<!-- PIPES -->
+
+
+    <!-- @for(item of items; track item.id; let i = $index; let last = $last; let first = $first){ -->
+      <!-- <li>{{ item | json}}</li> -->
+        <!-- <li> #{{i }}:  {{ item.name | uppercase }}</li>       -->
+        <!-- <li> #{{i }}:  {{ item.name | myCustomTransformation }} - {{ item.amount | currency}} - {{ item.date | date:'dd:MM:y'}}</li>      
+        
+    }@empty{
+        <li> Sem Dados</li>
+    } -->
+
+<!-- Variavel Local -->
+
+@let num1 =  1;
+<h1>{{ num1 + 1  }}</h1>
+<input type="text" #inputText>
