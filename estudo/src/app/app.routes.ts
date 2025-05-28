@@ -6,16 +6,20 @@ import { SecondComponent } from './modules/routas/second/second.component';
 export const routes: Routes = [
     {
         path:'',
-        component: LayoutComponent
+        component: LayoutComponent,
+        children: [
+
+            {
+                path:'first',
+                component: FirstComponent
+            },
+            {
+                path:'second',
+                component:SecondComponent
+            }
+             ]
 
     },
-    {
-        path:'first',
-        component: FirstComponent
-    },
-    {
-        path:'second',
-        component:SecondComponent
-    }
+  
 
 ];
