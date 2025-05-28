@@ -7,18 +7,7 @@ export const routes: Routes = [
     {
         path:'',
         component: LayoutComponent,
-        children: [
-
-            {
-                path:'first',
-                component: FirstComponent
-            },
-            {
-                path:'second',
-                component:SecondComponent
-            }
-             ]
-
+        loadChildren: () => import('./modules/routas/routa.routing').then(m => m.routasRoute)   
     },
   
 

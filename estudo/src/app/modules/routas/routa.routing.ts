@@ -4,19 +4,28 @@ import { LayoutComponent } from './layout/layout.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 
-const routasRoute: Route[] = [
+export const routasRoute: Route[] = [
   
     {
         path:'',
-        component: LayoutComponent,
         children: [
             {
-                path: '/first',
+                path: 'first',
                 component:FirstComponent
             },{
-                path: '/second',
+                path: 'second',
                 component: SecondComponent
+            },
+            {
+                path:'**',
+                redirectTo: '',
             }
-        ]
+        ],
+    },
+
+    {
+        path:'**',
+        // redirectTo: '',
+        component: FirstComponent
     }
 ]
