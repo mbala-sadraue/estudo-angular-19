@@ -11,15 +11,24 @@ export const routasRoute: Route[] = [
         children: [
             {
                 path: 'first',
-                component:FirstComponent
+                component:FirstComponent,
+                title: 'First Component',
+
+
             },{
                 path: 'second',
-                component: SecondComponent
+                component: SecondComponent,
+                title: 'Second Component',
             },
             {
                 path:'**',
                 redirectTo: '',
-            }
+            },
+
+            // {
+            //     path: 'first/:id',
+            //     component:FirstComponent
+            // }
         ],
     },
 
