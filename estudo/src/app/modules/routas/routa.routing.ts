@@ -13,6 +13,11 @@ export const routasRoute: Route[] = [
                 path: 'first',
                 component:FirstComponent,
                 title: 'First Component',
+                providers: [
+                
+                ],
+                data:{data:[]},
+                outlet: 'primary', // espefica que este é o outlet principal
 
 
             },{

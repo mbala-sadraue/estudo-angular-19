@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterModule, RouterOutlet } from '@angular/router';
 
 const COMPONENTS = []
 const MODULES =[
@@ -17,4 +17,16 @@ const MODULES =[
 })
 export class LayoutComponent {
 
+
+   router =  inject(Router)
+
+
+
+   onNavigate(route: string) {
+
+    this.router.navigateByUrl(route, );
+
+    // this.router.navigate([route]);
+   
+  }
 }
