@@ -19,9 +19,7 @@ export class LayoutComponent {
 
 
    router =  inject(Router)
-
-
-
+   
    onNavigate(route: string) {
 
     // this.router.navigateByUrl(route, );
