@@ -10,7 +10,7 @@ export const routasRoute: Route[] = [
         path:'',
         children: [
             {
-                path: 'first',
+                path: 'first/:id',
                 component:FirstComponent,
                 title: 'First Component',
                 providers: [

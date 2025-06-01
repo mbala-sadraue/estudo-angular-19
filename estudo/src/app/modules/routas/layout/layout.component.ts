@@ -24,9 +24,9 @@ export class LayoutComponent {
 
    onNavigate(route: string) {
 
-    this.router.navigateByUrl(route, );
+    // this.router.navigateByUrl(route, );
 
-    // this.router.navigate([route]);
+    this.router.navigate([route,'1239'],{queryParams:{id:123}});
    
   }
 }
