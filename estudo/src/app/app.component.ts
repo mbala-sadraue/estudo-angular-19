@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 
 import { SignalComponent } from './modules/signals/signal/signal.component';
 import { ComponentComponent } from './modules/components/component/component.component';
@@ -11,14 +11,12 @@ const COMPONENTS = [
   //  TemplateComponent,
 
    LayoutComponent,
-   FirstComponent,
-   SecondComponent,
   //  SignalComponent, ComponentComponent
 ]
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ...COMPONENTS],
+  imports: [RouterOutlet,RouterModule, ...COMPONENTS],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
