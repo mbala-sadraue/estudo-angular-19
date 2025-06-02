@@ -1,7 +1,9 @@
 
 <nav>
     <a routerLink="/first/2" routerLinkActive="active">First</a>  | 
-    <a routerLink="/second" routerLinkActive="active">seconde</a>
+    <a routerLink="/second" routerLinkActive="active">seconde</a> |
+    <!-- <a [routerLink]="['/first',{foo:'Teste'}]" routerLinkActive="active">First 2</a>  |  -->
+    <a [routerLink]="['/first',1]" routerLinkActive="active">First 2</a>  | 
 </nav>
 <button  (click)="onNavigate('first')">  first page</button>
 <router-outlet></router-outlet>
