@@ -8,5 +8,25 @@
         <label for="last-name">Last Name: </label>
         <input type="text"  id="last-name" formControlName="lastName"/>
     </div>
-    <button type="submit">Cadastrar</button>
+
+    <div   formGroupName="address">
+        <h3>Address</h3>
+
+        <div>
+            <label for="street">Street: </label>
+            <input type="text"  id="street" formControlName="street"/>
+        </div>
+
+        <div>
+            <label for="city">City: </label>
+            <input type="text"  id="city" formControlName="street"/>
+        </div>
+        <div>
+            <label for="street">state: </label>
+            <input type="text"  id="state" formControlName="street"/>
+        </div>
+
+    </div>
+    {{ profileForm.status }}
+    <button type="submit">Cadastrar</button>  | <button type="button" (click)="onUpdate()">Update</button>
 </form>
