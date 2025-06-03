@@ -38,7 +38,7 @@ export class ReactFormComponent {
       city: [''],
       state: [''],
     }),
-    alieses: this.formBuilder.array([
+    aliases: this.formBuilder.array([
       this.formBuilder.control('')])
   });
 
@@ -54,7 +54,7 @@ export class ReactFormComponent {
     // Process checkout data here
     console.log('Your order has been submitted', this.profileForm.value);
     console.log('M', this.profileForm.get('firstName')?.value);
-    console.log('Alieses', this.alieses);
+    console.log('aliases', this.aliases);
     
 
     this.profileForm.reset();
@@ -62,16 +62,18 @@ export class ReactFormComponent {
 
   }
 
-  get alieses() {
-    return this.profileForm.get('alieses') as FormArray;
+  get aliases() {
+    return this.profileForm.get('aliases') as FormArray;
   }
   onUpdate(): void {
     this.profileForm.patchValue({
       firstName: 'Elias',
       lastName: 'Salomão',
     })
+  }
 
-    
+  addAlias(): void {
+    this.aliases.push(this.formBuilder.control(''));
   }
 
 }
