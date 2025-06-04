@@ -10,13 +10,13 @@ import { SecondComponent } from './modules/routas/second/second.component';
 const COMPONENTS = [
   //  TemplateComponent,
 
-   LayoutComponent,
+  //  LayoutComponent,
   //  SignalComponent, ComponentComponent
 ]
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,RouterModule, ...COMPONENTS],
+  imports: [RouterOutlet,RouterModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

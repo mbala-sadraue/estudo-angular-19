@@ -10,7 +10,7 @@ export class HttpclientService {
   constructor() { }
 private readonly httpClient = inject(HttpClient);
 
-private readonly apiUrl = 'localhost:3000/users';
+private readonly apiUrl = 'http://localhost:3000/users';
 
 
 getUsers(){
