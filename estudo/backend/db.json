@@ -1,0 +1,14 @@
+{
+    "users":[
+        {
+            "firstName": "Salão",
+            "lastName":"ELias",
+            "idade": 21
+        },
+        {
+            "firstName": "Maria",
+            "lastName":"Virtudes",
+            "idade": 18
+        }
+    ]
+}

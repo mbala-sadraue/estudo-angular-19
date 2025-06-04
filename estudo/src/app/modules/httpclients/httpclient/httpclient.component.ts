@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { HttpclientService } from '../httpclient.service';
 
 @Component({
   selector: 'app-httpclient',
@@ -7,5 +8,18 @@ import { Component } from '@angular/core';
   styleUrl: './httpclient.component.scss'
 })
 export class HttpclientComponent {
+
+  httpclienteService = inject(HttpclientService);
+
+
+  ngOnInit(){
+    console.log("Inicial http");
+    
+    this.httpclienteService.getUsers().subscribe(
+      (data)=>{
+        console.log("REspostas", data)
+      }
+    )
+  }
 
 }

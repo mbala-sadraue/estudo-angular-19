@@ -19,6 +19,10 @@ export const routes: Routes = [
             {
                 path: 'formulario',
                 loadChildren:() => import('./modules/formularios/formulario.route').then(m => m.forumlarioRoutes)   
+            },
+            {
+                path:'http',
+                loadChildren: () => import('./modules/httpclients/httpclient.route').then(m => m.httpClientRoute)
             }
         ]
     }
