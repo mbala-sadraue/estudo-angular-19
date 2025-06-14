@@ -8,7 +8,14 @@ export function loggingIntercepter(req: HttpRequest<unknown>, next:HttpHandlerFn
 
     console.log('Interceptador'+req.url);
 
-    return next(req);
+    let newReq = req.clone(
+        {
+            headers: req.headers.set('Authorization','Bearer'+'')
+        }
+    );
+
+  
+    return next(newReq);
     
 
 }
